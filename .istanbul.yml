@@ -1,0 +1,18 @@
+verbose: false
+instrumentation:
+    preserve-comments: true
+    root: .
+    extensions:
+        - .js
+    default-excludes: true
+    excludes: ['test.js']
+reporting:
+    print: summary
+    reports:
+        - lcov
+    dir: ./coverage
+    watermarks:
+        statements: [80, 95]
+        lines: [80, 95]
+        functions: [80, 95]
+        branches: [80, 95]
