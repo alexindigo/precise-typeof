@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint *.js test/*.js",
-    "test": "nyc --reporter=lcov --reporter=text tape ./test/test-*.js",
-    "posttest": "nyc check-coverage --lines 80 --functions 100 --branches 80",
+    "pretest": "rimraf coverage",
+    "test": "nyc --reporter=json tape ./test/test-*.js && browserify -t browserify-istanbul test/test-*.js | ./obake/index.js | tap-set-exit",
+    "posttest": "nyc report --reporter=lcov --reporter=text && nyc check-coverage --lines 80 --functions 100 --branches 80",
     "browser": "browserify test/test-*.js | ghostface | tap-set-exit"
   },
   "pre-commit": [
@@ -34,7 +35,8 @@
   },
   "homepage": "https://github.com/alexindigo/precise-typeof#readme",
   "devDependencies": {
-    "browserify": "^12.0.1",
+    "browserify": "^13.0.0",
+    "browserify-istanbul": "^0.2.1",
     "codecov.io": "^0.1.6",
     "coveralls": "^2.11.6",
     "eslint": "^1.10.3",
@@ -43,7 +45,11 @@
     "phantomjs": "^1.9.19",
     "pre-commit": "^1.1.2",
     "reamde": "^1.1.0",
+    "rimraf": "^2.5.0",
     "tap-set-exit": "^1.1.1",
     "tape": "^4.4.0"
+  },
+  "dependencies": {
+    "is-buffer": "^1.1.1"
   }
 }

@@ -1,5 +1,7 @@
 'use strict';
 
+var isBuffer = require('is-buffer');
+
 // Public API
 module.exports = preciseTypeOf;
 
@@ -16,7 +18,7 @@ function preciseTypeOf(obj)
   if (!type && obj === undefined) type = 'undefined';
   if (!type && obj === null) type = 'null';
 
-  if (!type && typeof Buffer != 'undefined' && Buffer.isBuffer(obj)) type = 'buffer';
+  if (!type && isBuffer(obj)) type = 'buffer';
 
   if (!type && typeof window == 'object' && obj === window) type = 'global';
   if (!type && typeof global == 'object' && obj === global) type = 'global';

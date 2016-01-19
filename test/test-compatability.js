@@ -40,8 +40,8 @@ var nodeSamples = function(){ return [
   {'buffer' : new Buffer('C')},
   {'buffer' : Buffer(1)},
   {'buffer' : new Buffer(2)},
-  {'buffer' : Buffer([012, 014, 016])},
-  {'buffer' : new Buffer([012, 014, 016])}
+  {'buffer' : Buffer([62, 64, 66])},
+  {'buffer' : new Buffer([92, 94, 96])}
 ]; };
 
 // seems like util.inspect in pre-io.js doesn't handle Symbols correctly
@@ -71,7 +71,7 @@ test('precise_typeof', function(t)
 });
 
 // node specific tests
-test.if(typeof process != 'undefined').then('precise types in node', function(t)
+test.if(typeof process != 'undefined' && 'node' in process.versions).then('precise types in node', function(t)
 {
   runTests(t, nodeSamples);
 });
@@ -105,8 +105,7 @@ function runTests(t, list)
   while ((s = list.shift()))
   {
     type = Object.keys(s)[0];
-    //console.log('... expecting', type, 'from', s[type], 'got', preciseTypeOf(s[type]), '<>', Object.prototype.toString.call(s[type]));
-    t.deepEqual(preciseTypeOf(s[type]), type);
+    t.deepEqual(preciseTypeOf(s[type]), type, Object.prototype.toString.call(s[type]) + ' - expecting to be ' + type);
   }
 
   t.end();
