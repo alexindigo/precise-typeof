@@ -20,7 +20,38 @@ $ npm install precise-typeof --save
 
 ## Examples
 
-TBW
+```javascript
+var typeOf = require('precise-typeof');
+
+typeOf({});           // -> 'object'
+typeOf([]);           // -> 'array'
+typeOf(25);           // -> 'number'
+typeOf(Infinity);     // -> 'number'
+typeOf('ABC');        // -> 'string'
+typeOf(function(){}); // -> 'function'
+typeOf(Math.sin);     // -> 'function'
+typeOf(undefined);    // -> 'undefined'
+typeOf(true);         // -> 'boolean'
+typeOf(null);         // -> 'null'
+typeOf(NaN);          // -> 'nan'
+
+// object values
+typeOf(new Object());                           // -> 'object'
+typeOf(new Array());                            // -> 'array'
+typeOf(new Number(5));                          // -> 'number'
+typeOf(new Number(Infinity));                   // -> 'number'
+typeOf(new String('ABC'));                      // -> 'string'
+typeOf(new Function('a', 'b', 'return a + b')); // -> 'function'
+typeOf(new Boolean());                          // -> 'boolean'
+typeOf(new Number('blabla'));                   // -> 'nan'
+
+// special objects
+typeOf(/s/);         // -> 'regexp'
+typeOf(new Date());  // -> 'date'
+typeOf(Math);        // -> 'math'
+typeOf(new Error()); // -> 'error'
+typeOf(arguments);   // -> 'arguments'
+```
 
 More examples can be found in [test/test-compatability.js](test/test-compatability.js).
 

@@ -1,19 +1,20 @@
+sudo: false
 language: node_js
 node_js:
   - "0.10"
   - "0.12"
   - "iojs"
-  - "4.2"
+  - "4"
   - "stable"
 script:
   - node --version
   - npm --version
   # linting
   - npm run lint
-  # nodejs testing
+  # testing
+  - npm run clean
   - npm run test
-  # phantomjs testing
   - npm run browser
+  - npm run report
 after_success:
-  - "cat coverage/coverage-final.json | ./node_modules/.bin/codecov"
   - "cat coverage/lcov.info | ./node_modules/.bin/coveralls"

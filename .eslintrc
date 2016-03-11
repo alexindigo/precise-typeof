@@ -1,4 +1,9 @@
 {
+  "env": {
+    "node"   : true,
+    "browser": true,
+    "es6"    : true
+  },
   "rules": {
     "indent": [2, 2, {"SwitchCase": 1}],
     "quotes": [2, "single"],
@@ -21,11 +26,14 @@
     "no-redeclare": [2, { "builtinGlobals": true }],
     "no-shadow": [2, { "builtinGlobals": true, "hoist": "all" }],
     "no-use-before-define": [2, "nofunc"],
+    "new-cap": [2, {"capIsNewExceptions": ["Buffer"]}],
     "no-shadow-restricted-names": 2,
+    "no-irregular-whitespace": 2,
     "no-extra-semi": 2,
     "no-unused-vars": 2,
     "no-undef": 2,
     "no-octal": 2,
+    "no-console": 2,
     "key-spacing": 0,
     "strict": 0,
     "dot-notation": 0,
@@ -34,11 +42,6 @@
     "semi-spacing": 0,
     "no-multi-spaces": 0,
     "eqeqeq": 0,
-    "no-mixed-requires": 0,
-    "no-console": 0
-  },
-  "env": {
-    "node": true,
-    "browser": true
+    "no-mixed-requires": 0
   }
 }
