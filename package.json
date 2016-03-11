@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint *.js test/*.js",
     "clean": "rimraf coverage",
-    "test": "istanbul cover --reporter=json test/test-*.js | tap-spec",
+    "test": "istanbul cover --reporter=json test/test-compatability.js | tap-spec",
     "browser": "browserify -t browserify-istanbul test/test-*.js | obake --coverage | tap-spec",
     "report": "istanbul report",
     "files": "pkgfiles --sort=name"
