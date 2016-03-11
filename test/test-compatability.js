@@ -4,6 +4,7 @@ var test          = require('./common.js')
 
 var samples = [
   {'object'   : {}},
+  {'object'   : new function(){}},
   {'array'    : []},
   {'number'   : 5},
   {'number'   : Infinity},
@@ -35,7 +36,7 @@ var samples = [
 
 var nodeSamples = function(){ return [
   {'global' : global},
-  // {'process': process},
+  {'process': process},
   {'buffer' : Buffer('B')},
   {'buffer' : new Buffer('C')},
   {'buffer' : Buffer(1)},

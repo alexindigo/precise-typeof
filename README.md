@@ -23,17 +23,18 @@ $ npm install precise-typeof --save
 ```javascript
 var typeOf = require('precise-typeof');
 
-typeOf({});           // -> 'object'
-typeOf([]);           // -> 'array'
-typeOf(25);           // -> 'number'
-typeOf(Infinity);     // -> 'number'
-typeOf('ABC');        // -> 'string'
-typeOf(function(){}); // -> 'function'
-typeOf(Math.sin);     // -> 'function'
-typeOf(undefined);    // -> 'undefined'
-typeOf(true);         // -> 'boolean'
-typeOf(null);         // -> 'null'
-typeOf(NaN);          // -> 'nan'
+typeOf({});               // -> 'object'
+typeOf(new function(){}); // -> 'object'
+typeOf([]);               // -> 'array'
+typeOf(25);               // -> 'number'
+typeOf(Infinity);         // -> 'number'
+typeOf('ABC');            // -> 'string'
+typeOf(function(){});     // -> 'function'
+typeOf(Math.sin);         // -> 'function'
+typeOf(undefined);        // -> 'undefined'
+typeOf(true);             // -> 'boolean'
+typeOf(null);             // -> 'null'
+typeOf(NaN);              // -> 'nan'
 
 // object values
 typeOf(new Object());                           // -> 'object'
@@ -51,10 +52,32 @@ typeOf(new Date());  // -> 'date'
 typeOf(Math);        // -> 'math'
 typeOf(new Error()); // -> 'error'
 typeOf(arguments);   // -> 'arguments'
-```
 
-More examples can be found in [test/test-compatability.js](test/test-compatability.js).
+// node
+typeOf(global);               // -> 'global'
+typeOf(process);              // -> 'process'
+typeOf(Buffer('B'));          // -> 'buffer'
+typeOf(new Buffer(2));        // -> 'buffer'
+typeOf(Buffer([62, 64, 66])); // -> 'buffer'
+
+// es6
+typeOf(Symbol('A')); // -> 'symbol'
+
+// browser
+typeOf(window);                                   // -> 'global'
+typeOf(document);                                 // -> 'html'
+typeOf(document.body);                            // -> 'html'
+typeOf(document.getElementsByTagName('html')[0]); // -> 'html'
+typeOf(document.getElementsByTagName('div'));     // -> 'html'
+typeOf(document.createElement('a'));              // -> 'html'
+typeOf(document.createTextNode('Abcd'));          // -> 'text'
+typeOf(document.createComment('abcd'));           // -> 'comment'
+typeOf(document.createEvent('Event'));            // -> 'event'
+typeOf(document.createEvent('UIEvents'));         // -> 'event'
+typeOf(document.createEvent('HTMLEvents'));       // -> 'event'
+typeOf(document.createEvent('MouseEvents'));      // -> 'event'
+```
 
 ## License
 
-Deeply is licensed under the MIT license.
+Precise-TypeOf is licensed under the MIT license.
