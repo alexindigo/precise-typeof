@@ -26,7 +26,7 @@
     "no-redeclare": [2, { "builtinGlobals": true }],
     "no-shadow": [2, { "builtinGlobals": true, "hoist": "all" }],
     "no-use-before-define": [2, "nofunc"],
-    "new-cap": [2, {"capIsNewExceptions": ["Buffer"]}],
+    "new-cap": [2, {"capIsNewExceptions": ["Buffer", "Symbol"]}],
     "no-shadow-restricted-names": 2,
     "no-irregular-whitespace": 2,
     "no-extra-semi": 2,

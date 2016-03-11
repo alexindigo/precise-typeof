@@ -46,7 +46,7 @@ var nodeSamples = function(){ return [
 
 // seems like util.inspect in pre-io.js doesn't handle Symbols correctly
 var newNodeSamples = function(){ return [
-  {'symbol': new Symbol('A')}
+  {'symbol': Symbol('A')}
 ]; };
 
 var browserSamples = function(){ return [
