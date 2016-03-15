@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint *.js test/*.js",
     "clean": "rimraf coverage",
-    "test": "istanbul cover --reporter=json tape test/test-*.js | tap-spec",
+    "test": "nyc --reporter=json tape test/test-*.js | tap-spec",
     "browser": "browserify -t browserify-istanbul test/test-*.js | obake --coverage | tap-spec",
     "report": "istanbul report",
     "files": "pkgfiles --sort=name"
@@ -45,6 +45,7 @@
     "coveralls": "^2.11.8",
     "eslint": "^2.3.0",
     "istanbul": "^0.4.2",
+    "nyc": "^6.1.1",
     "obake": "^0.1.2",
     "phantomjs-prebuilt": "^2.1.5",
     "pre-commit": "^1.1.2",
