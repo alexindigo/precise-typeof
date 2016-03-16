@@ -1,6 +1,6 @@
 {
   "name": "precise-typeof",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Better 'typeof'. Detects real type of the objects like 'Array()', 'new Number(1)', 'new Boolean(true)', etc.",
   "main": "index.js",
   "scripts": {
@@ -45,7 +45,7 @@
   "homepage": "https://github.com/alexindigo/precise-typeof#readme",
   "devDependencies": {
     "browserify": "^13.0.0",
-    "browserify-istanbul": "^1.0.0",
+    "browserify-istanbul": "^2.0.0",
     "coveralls": "^2.11.8",
     "eslint": "^2.3.0",
     "istanbul": "^0.4.2",
