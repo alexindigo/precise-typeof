@@ -12,9 +12,16 @@ Better `typeof`. Detects real type of the objects like `Array()`, `new Number(1)
 <!-- Not yet ![Readme](https://img.shields.io/badge/readme-tested-brightgreen.svg?style=flat)
 Too many false positives [![Codacy Badge](https://img.shields.io/codacy/5f1289b78b7346498797f9f3cd674408.svg)](https://www.codacy.com/app/alexindigo/precise-typeof) -->
 
+| compression              |    size |
+| :----------------------- | ------: |
+| precise-typeof.js        | 2.35 kB |
+| precise-typeof.min.js    | 1.41 kB |
+| precise-typeof.min.js.gz |   639 B |
+
+
 ## Install
 
-```
+```sh
 $ npm install precise-typeof --save
 ```
 
