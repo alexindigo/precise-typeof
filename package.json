@@ -22,7 +22,7 @@
     "files"
   ],
   "engines": {
-    "node": ">= 0.10"
+    "node": ">= 4"
   },
   "repository": {
     "type": "git",
