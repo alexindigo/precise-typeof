@@ -44,7 +44,7 @@
   },
   "homepage": "https://github.com/alexindigo/precise-typeof#readme",
   "devDependencies": {
-    "browserify": "^13.0.0",
+    "browserify": "^13.2.0",
     "browserify-istanbul": "^2.0.0",
     "coveralls": "^2.11.8",
     "eslint": "^2.3.0",
