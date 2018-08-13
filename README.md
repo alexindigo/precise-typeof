@@ -9,6 +9,7 @@ Better `typeof`. Detects real type of the objects like `Array()`, `new Number(1)
 
 [![Coverage Status](https://img.shields.io/coveralls/alexindigo/precise-typeof/master.svg?label=code+coverage&style=flat)](https://coveralls.io/github/alexindigo/precise-typeof?branch=master)
 [![Dependency Status](https://img.shields.io/david/alexindigo/precise-typeof.svg?style=flat)](https://david-dm.org/alexindigo/precise-typeof)
+[![MIT license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](https://opensource.org/licenses/MIT)
 
 <!-- Not yet ![Readme](https://img.shields.io/badge/readme-tested-brightgreen.svg?style=flat)
 Too many false positives [![Codacy Badge](https://img.shields.io/codacy/5f1289b78b7346498797f9f3cd674408.svg)](https://www.codacy.com/app/alexindigo/precise-typeof) -->
