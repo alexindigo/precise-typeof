@@ -2,12 +2,12 @@
 
 Better `typeof`. Detects real type of the objects like `Array()`, `new Number(1)`, `new Boolean(true)`, etc.
 
-[![PhantomJS Build](https://img.shields.io/travis/alexindigo/precise-typeof/canary.svg?label=browser&style=flat)](https://travis-ci.org/alexindigo/precise-typeof)
-[![Linux Build](https://img.shields.io/travis/alexindigo/precise-typeof/canary.svg?label=linux:6.x-10.x&style=flat)](https://travis-ci.org/alexindigo/precise-typeof)
-[![MacOS Build](https://img.shields.io/travis/alexindigo/precise-typeof/canary.svg?label=macos:6.x-10.x&style=flat)](https://travis-ci.org/alexindigo/precise-typeof)
-[![Windows Build](https://img.shields.io/appveyor/ci/alexindigo/precise-typeof/canary.svg?label=windows:6.x-10.x&style=flat)](https://ci.appveyor.com/project/alexindigo/precise-typeof)
+[![PhantomJS Build](https://img.shields.io/travis/alexindigo/precise-typeof/master.svg?label=browser&style=flat)](https://travis-ci.org/alexindigo/precise-typeof)
+[![Linux Build](https://img.shields.io/travis/alexindigo/precise-typeof/master.svg?label=linux:6.x-10.x&style=flat)](https://travis-ci.org/alexindigo/precise-typeof)
+[![MacOS Build](https://img.shields.io/travis/alexindigo/precise-typeof/master.svg?label=macos:6.x-10.x&style=flat)](https://travis-ci.org/alexindigo/precise-typeof)
+[![Windows Build](https://img.shields.io/appveyor/ci/alexindigo/precise-typeof/master.svg?label=windows:6.x-10.x&style=flat)](https://ci.appveyor.com/project/alexindigo/precise-typeof)
 
-[![Coverage Status](https://img.shields.io/coveralls/alexindigo/precise-typeof/canary.svg?label=code+coverage&style=flat)](https://coveralls.io/github/alexindigo/precise-typeof?branch=canary)
+[![Coverage Status](https://img.shields.io/coveralls/alexindigo/precise-typeof/master.svg?label=code+coverage&style=flat)](https://coveralls.io/github/alexindigo/precise-typeof?branch=master)
 [![Dependency Status](https://img.shields.io/david/alexindigo/precise-typeof.svg?style=flat)](https://david-dm.org/alexindigo/precise-typeof)
 
 <!-- Not yet ![Readme](https://img.shields.io/badge/readme-tested-brightgreen.svg?style=flat)
