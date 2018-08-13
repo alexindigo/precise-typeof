@@ -2,8 +2,7 @@
 
 Better `typeof`. Detects real type of the objects like `Array()`, `new Number(1)`, `new Boolean(true)`, etc.
 
-[![PhantomJS Build](https://img.shields.io/travis/alexindigo/precise-typeof/master.svg?label=browser&style=flat)](https://travis-ci.org/alexindigo/precise-typeof)
-
+[![PhantomJS Build](https://img.shields.io/travis/alexindigo/precise-typeof/canary.svg?label=browser&style=flat)](https://travis-ci.org/alexindigo/precise-typeof)
 [![Linux Build](https://img.shields.io/travis/alexindigo/precise-typeof/canary.svg?label=linux:6.x-10.x&style=flat)](https://travis-ci.org/alexindigo/precise-typeof)
 [![MacOS Build](https://img.shields.io/travis/alexindigo/precise-typeof/canary.svg?label=macos:6.x-10.x&style=flat)](https://travis-ci.org/alexindigo/precise-typeof)
 [![Windows Build](https://img.shields.io/appveyor/ci/alexindigo/precise-typeof/canary.svg?label=windows:6.x-10.x&style=flat)](https://ci.appveyor.com/project/alexindigo/precise-typeof)
@@ -24,7 +23,13 @@ Too many false positives [![Codacy Badge](https://img.shields.io/codacy/5f1289b7
 ## Install
 
 ```sh
-$ npm install precise-typeof --save
+$ yarn add precise-typeof
+```
+
+or
+
+```sh
+$ npm install --save precise-typeof
 ```
 
 ## Examples
@@ -89,4 +94,4 @@ typeOf(document.createEvent('MouseEvents'));      // -> 'event'
 
 ## License
 
-Precise-TypeOf is licensed under the MIT license.
+Precise-TypeOf is released under the MIT license.
