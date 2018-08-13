@@ -3,20 +3,22 @@
 Better `typeof`. Detects real type of the objects like `Array()`, `new Number(1)`, `new Boolean(true)`, etc.
 
 [![PhantomJS Build](https://img.shields.io/travis/alexindigo/precise-typeof/master.svg?label=browser&style=flat)](https://travis-ci.org/alexindigo/precise-typeof)
-[![Linux Build](https://img.shields.io/travis/alexindigo/precise-typeof/master.svg?label=linux:0.10-5.x&style=flat)](https://travis-ci.org/alexindigo/precise-typeof)
-[![Windows Build](https://img.shields.io/appveyor/ci/alexindigo/precise-typeof/master.svg?label=windows:0.10-5.x&style=flat)](https://ci.appveyor.com/project/alexindigo/precise-typeof)
 
-[![Coverage Status](https://img.shields.io/coveralls/alexindigo/precise-typeof/master.svg?label=code+coverage&style=flat)](https://coveralls.io/github/alexindigo/precise-typeof?branch=master)
+[![Linux Build](https://img.shields.io/travis/alexindigo/precise-typeof/canary.svg?label=linux:6.x-10.x&style=flat)](https://travis-ci.org/alexindigo/precise-typeof)
+[![MacOS Build](https://img.shields.io/travis/alexindigo/precise-typeof/canary.svg?label=macos:6.x-10.x&style=flat)](https://travis-ci.org/alexindigo/precise-typeof)
+[![Windows Build](https://img.shields.io/appveyor/ci/alexindigo/precise-typeof/canary.svg?label=windows:6.x-10.x&style=flat)](https://ci.appveyor.com/project/alexindigo/precise-typeof)
+
+[![Coverage Status](https://img.shields.io/coveralls/alexindigo/precise-typeof/canary.svg?label=code+coverage&style=flat)](https://coveralls.io/github/alexindigo/precise-typeof?branch=canary)
 [![Dependency Status](https://img.shields.io/david/alexindigo/precise-typeof.svg?style=flat)](https://david-dm.org/alexindigo/precise-typeof)
-[![bitHound Overall Score](https://www.bithound.io/github/alexindigo/precise-typeof/badges/score.svg)](https://www.bithound.io/github/alexindigo/precise-typeof)
+
 <!-- Not yet ![Readme](https://img.shields.io/badge/readme-tested-brightgreen.svg?style=flat)
 Too many false positives [![Codacy Badge](https://img.shields.io/codacy/5f1289b78b7346498797f9f3cd674408.svg)](https://www.codacy.com/app/alexindigo/precise-typeof) -->
 
 | compression              |    size |
 | :----------------------- | ------: |
-| precise-typeof.js        | 2.35 kB |
+| precise-typeof.js        | 2.24 kB |
 | precise-typeof.min.js    | 1.41 kB |
-| precise-typeof.min.js.gz |   639 B |
+| precise-typeof.min.js.gz |   632 B |
 
 
 ## Install
