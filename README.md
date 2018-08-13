@@ -60,6 +60,9 @@ typeOf(new Function('a', 'b', 'return a + b')); // -> 'function'
 typeOf(new Boolean());                          // -> 'boolean'
 typeOf(new Number('blabla'));                   // -> 'nan'
 
+// instances
+typeOf(new function Moment(){});                // -> 'object'
+
 // special objects
 typeOf(/s/);         // -> 'regexp'
 typeOf(new Date());  // -> 'date'
@@ -90,6 +93,43 @@ typeOf(document.createEvent('Event'));            // -> 'event'
 typeOf(document.createEvent('UIEvents'));         // -> 'event'
 typeOf(document.createEvent('HTMLEvents'));       // -> 'event'
 typeOf(document.createEvent('MouseEvents'));      // -> 'event'
+```
+
+### `{ pojoOnly: true }`
+
+With `pojoOnly` flag it only reports Plain-Old Javascript Objects as `object`,
+and reports "instances" by their constructor names (e.g. `Moment` for `moment` instance).
+In case if object was created from the nameless function, it will be reported as `unknown`.
+
+```javascript
+var typeOf = require('precise-typeof');
+
+// reported differently with `{pojoOnly: true}`
+typeOf(new function Moment(){}, {pojoOnly: true}); // -> 'Moment'
+typeOf(new function ABC(){}, {pojoOnly: true});    // -> 'ABC'
+typeOf(new function(){}, {pojoOnly: true});        // -> 'unknown'
+
+// same with or without `{pojoOnly: true}`
+typeOf({}, {pojoOnly: true});                      // -> 'object'
+typeOf([], {pojoOnly: true});                      // -> 'array'
+typeOf(25, {pojoOnly: true});                      // -> 'number'
+typeOf(Infinity, {pojoOnly: true});                // -> 'number'
+typeOf('ABC', {pojoOnly: true});                   // -> 'string'
+typeOf(function(){}, {pojoOnly: true});            // -> 'function'
+typeOf(Math.sin, {pojoOnly: true});                // -> 'function'
+typeOf(undefined, {pojoOnly: true});               // -> 'undefined'
+typeOf(true, {pojoOnly: true});                    // -> 'boolean'
+typeOf(null, {pojoOnly: true});                    // -> 'null'
+typeOf(NaN, {pojoOnly: true});                     // -> 'nan'
+
+typeOf(new Object(), {pojoOnly: true});            // -> 'object'
+typeOf(new Array(), {pojoOnly: true});             // -> 'array'
+typeOf(new Number(5), {pojoOnly: true});           // -> 'number'
+typeOf(new Number(Infinity), {pojoOnly: true});    // -> 'number'
+typeOf(new String('ABC'), {pojoOnly: true});       // -> 'string'
+typeOf(new Function(), {pojoOnly: true});          // -> 'function'
+typeOf(new Boolean(), {pojoOnly: true});           // -> 'boolean'
+typeOf(new Number('blabla'), {pojoOnly: true});    // -> 'nan'
 ```
 
 ## License
