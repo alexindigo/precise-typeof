@@ -40,7 +40,11 @@
     "kind",
     "kindof",
     "object",
-    "array"
+    "array",
+    "pojo",
+    "instance",
+    "instanceof",
+    "plain object"
   ],
   "author": "Alex Indigo <iam@alexindigo.com>",
   "license": "MIT",
