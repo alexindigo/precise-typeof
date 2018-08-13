@@ -2024,10 +2024,6 @@ is-buffer@^1.1.0, is-buffer@^1.1.5:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
 
-is-buffer@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-2.0.3.tgz#4ecf3fcf749cbd1e472689e109ac66261a25e725"
-
 is-builtin-module@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-builtin-module/-/is-builtin-module-1.0.0.tgz#540572d34f7ac3119f8f76c30cbc1b1e037affbe"
@@ -4198,9 +4194,9 @@ uglify-js@^2.4.15, uglify-js@^2.6:
   optionalDependencies:
     uglify-to-browserify "~1.0.0"
 
-"uglify-stream@git+https://github.com/michaelrhodes/uglify-stream#1.1.1":
+uglify-stream@michaelrhodes/uglify-stream#1.1.1:
   version "1.1.1"
-  resolved "git+https://github.com/michaelrhodes/uglify-stream#0a6a56b9101e2339af159a346d4b901d9480c5c8"
+  resolved "https://codeload.github.com/michaelrhodes/uglify-stream/tar.gz/0a6a56b9101e2339af159a346d4b901d9480c5c8"
   dependencies:
     duplexify "^3.0.1"
     uglify-js "^2.4.15"

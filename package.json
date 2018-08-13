@@ -9,7 +9,7 @@
     "test": "nyc --reporter=json tape test/test-*.js | tap-spec",
     "browser": "browserify -t browserify-istanbul test/test-*.js | obake --coverage | tap-spec",
     "report": "istanbul report",
-    "size": "browserify index.js | size-table precise-typeof",
+    "size": "cat index.js | size-table precise-typeof",
     "testall": "npm run test && npm run browser && npm run report"
   },
   "files": [
@@ -64,7 +64,5 @@
     "tap-spec": "^5.0.0",
     "tape": "^4.5.1"
   },
-  "dependencies": {
-    "is-buffer": "^2.0.3"
-  }
+  "dependencies": {}
 }
