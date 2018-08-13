@@ -31,7 +31,7 @@ function preciseTypeOf(obj)
   if (!type && stamp.substr(0, 12) == '[object Node') type = 'html';
 
   // last resort
-  if (!type) type = Object.prototype.toString.call(obj).match(/\[object\s*([^\]]+)\]/)[1].toLowerCase();
+  if (!type) type = stamp.match(/\[object\s*([^\]]+)\]/)[1].toLowerCase();
 
   return type;
 }

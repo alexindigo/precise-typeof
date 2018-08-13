@@ -15,9 +15,9 @@ Too many false positives [![Codacy Badge](https://img.shields.io/codacy/5f1289b7
 
 | compression              |    size |
 | :----------------------- | ------: |
-| precise-typeof.js        | 2.24 kB |
-| precise-typeof.min.js    | 1.41 kB |
-| precise-typeof.min.js.gz |   632 B |
+| precise-typeof.js        | 2.21 kB |
+| precise-typeof.min.js    | 1.38 kB |
+| precise-typeof.min.js.gz |   618 B |
 
 
 ## Install
