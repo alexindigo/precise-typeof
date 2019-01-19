@@ -12,7 +12,7 @@ os:
   - linux
 
 install:
-  - travis_retry yarn install
+  - travis_retry npm install
 
 script:
   - uname -a
