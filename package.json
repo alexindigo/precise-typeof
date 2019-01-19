@@ -1,6 +1,6 @@
 {
   "name": "precise-typeof",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Better 'typeof'. Detects real type of the objects like 'Array()', 'new Number(1)', 'new Boolean(true)', etc.",
   "main": "index.js",
   "scripts": {

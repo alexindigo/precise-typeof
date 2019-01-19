@@ -5,13 +5,14 @@ node_js:
   - "6"
   - "8"
   - "10"
+  - "11"
 
 os:
   - osx
   - linux
 
 install:
-  - travis_retry yarn install
+  - travis_retry npm install
 
 script:
   - uname -a
