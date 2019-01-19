@@ -35,11 +35,12 @@ function preciseTypeOf(obj, options)
   if (!type) type = stamp.match(/\[object\s*([^\]]+)\]/)[1].toLowerCase();
 
   // be even more precise by reporting "instance of" names
-  if (type == 'object' && options.pojoOnly) {
+  // Note: only check objects that were created by constructors
+  if (type == 'object' && options.pojoOnly && obj.constructor) {
     // some constructors don't have names
     type = obj.constructor.name || 'unknown';
 
-    // precerve `object` response for POJOs
+    // preserve `object` response for POJOs
     if (type == 'Object') type = 'object';
   }
 

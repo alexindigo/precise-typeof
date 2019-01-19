@@ -56,7 +56,8 @@ module.exports.customObjects = function(){ return [
   {'Moment': new function Moment(){}},
   {'ABC': new function ABC(){}},
   {'unknown': new function(){}},
-  {'object': new Object()}
+  {'object': new Object()},
+  {'object': Object.create(null)}
 ]; };
 
 module.exports.nodeSamples = function(){ return [
